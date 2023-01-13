@@ -284,7 +284,6 @@ header{
 }
 
 .bottom{
-    background: #aa017e;
     padding: 150px 0;
     .bottom_bg_img{
         background-color: #aa017e;
@@ -326,7 +325,7 @@ header{
                     font-weight: 700;
                 }
                 .input_form{
-                    margin: 15px;
+                    margin: 15px 25px;
                     .input_name,
                     .input_email{
                         width: 100%;
@@ -340,10 +339,9 @@ header{
                             outline: none;
                         }
                         .svg-inline--fa.fa-user,
-                        .svg-inline--fa.fa-envelope,
-                        .svg-inline--fa.fa-graduation-cap{
+                        .svg-inline--fa.fa-envelope{
                             color: var(--primary_color);
-                            pointer-events: none;
+                            // pointer-events: none;
                             padding-left: 15px;
                             font-size: 15px;
                         }
@@ -353,19 +351,65 @@ header{
                     }
                     .input_language{
                         margin-top: 15px;
-                        padding: 8px 15px;
-                        border: 1px solid #ccc;
+                        padding: 8px 0px;
                         border-radius: 50px;
                         text-align:  left;
+                        position: relative;
+                        font-size: 13px;
 
-                        select{
+                        #fancy_select{
+                            position: relative;
                             width: 90%;
-                            border: none;
                         }
-                        .svg-inline--fa.fa-graduation-cap{
+
+                        #selected{
+                            border: 1px solid rgb(211, 204, 204);
+                            padding: 10px 15px;
+                            border-radius: 50px;
+                            cursor: pointer;
+                            opacity: 0.7;
+
+                            .svg-inline--fa.fa-graduation-cap{
+                                color: var(--primary_color);
+                                pointer-events: none;
+                                font-size: 15px;
+                                margin-right: 3px;
+                            }
+                        }
+
+                        #selected::after{
+                            content:"\f078";
+                            font-family: "Font Awesome 5 Free";
+                            font-weight: 900;
+                            position: absolute;
+                            right: 30px;
+                            top: 20px;
+                            cursor: pointer;
+                            color: black;
+                        }
+
+                        #select_option{
+                            border: 1px solid #ccc;
+                            width: 100%;
+                            cursor: pointer;
+                            display: none;
+                        }
+
+                        .option{
+                            margin: 5px 40px;
+                            transition: all .2s;
+                        }
+
+                        .option:hover{
                             color: var(--primary_color);
-                            pointer-events: none;
-                            font-size: 15px;
+                        }
+                        
+                        .open{
+                            display: block !important;
+                        }
+
+                        .remove{
+                            display: none;
                         }
                     }
                     .text_box{
@@ -425,7 +469,6 @@ header{
         }
     }
     .footer_info{
-        color: white;
         margin-top: 200px;
 
             ion-icon{
@@ -467,7 +510,6 @@ header{
                         margin-right: 10px;
                         font-size: 15px;
                         text-decoration: none;
-                        color: white;
                         transition: all 0.2s ease-in-out;
                     }
                     a:hover{
@@ -478,7 +520,6 @@ header{
         .Quick_link{
             .footer_text{
                 a{
-                    color: white;
                     display: block;
                     text-decoration: none;
                     transition: opacity 0.2s linear;
@@ -494,7 +535,6 @@ header{
         .About{
             .footer_text{
                 a{
-                    color: white;
                     display: block;
                     text-decoration: none;
                     transition: opacity 0.2s linear;
